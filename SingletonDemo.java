@@ -7,6 +7,7 @@ class Singleton {
     public static Singleton getInstance() {
         if (instance == null)
             instance = new Singleton();
+
         return instance;
     }
 
@@ -16,11 +17,13 @@ class Singleton {
 }
 
 public class SingletonDemo {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
+
         Singleton s1 = Singleton.getInstance();
         Singleton s2 = Singleton.getInstance();
 
         s1.display();
+
         System.out.println(s1 == s2);
     }
 }
